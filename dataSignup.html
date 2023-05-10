@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <script src="signupTwo.js" type="module"></script>
+
+</head>
+
+<body>
+    <h1 class="text-3xl text-teal-600">We need more information if you will engage in a purchase.</h1>
+    <div class=" h-auto p-2 relative border-4 border-orange-500 md:container md:mx-auto">
+
+        <form method="post" action="./userRegister.php">
+
+            <div class="border-b border-gray-900/10 pb-12">
+                <h2 class="text-base font-semibold leading-7 text-gray-900">Informacion personal</h2>
+                <p class="mt-1 text-sm leading-6 text-gray-600">Porfavor usa una cuenta de correo permanente donde
+                    puedas recibir notificaciones</p>
+
+                <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                    <div class="sm:col-span-3">
+                        <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Nombre</label>
+                        <div class="mt-2">
+                            <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="last-name"
+                            class="block text-sm font-medium leading-6 text-gray-900">Apellido</label>
+                        <div class="mt-2">
+                            <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Localidad</label>
+                        <div class="mt-2">
+                            <select id="locate" name="localidad" autocomplete="country-name"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                                <option>Engativa</option>
+                                <option>Suba</option>
+                                <option>Ciudad bolivar</option>
+                                <option>Usaquen</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="street-address"
+                            class="block text-sm font-medium leading-6 text-gray-900">Direccion</label>
+                        <div class="mt-2">
+                            <input type="text" name="street-address" id="street-address" autocomplete="street-address"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="region" class="block text-sm font-medium leading-6 text-gray-900">Barrio</label>
+                        <div class="mt-2">
+                            <input type="text" name="neighborhood" id="neighborhood" autocomplete="address-level1"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="postal-code" class="block text-sm font-medium leading-6 text-gray-900">Codigo
+                            postal</label>
+                        <div class="mt-2">
+                            <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-6">
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email address</label>
+                        <input type="email" name="email" id="email" class="block w-full pl-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="john.doe@company.com" required>
+                    </div>
+<br>
+                    <div class="flex w-96 items-center absolute left-14 bottom-14">
+                        <input id="link-checkbox" name="agree" type="checkbox" value=""
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="link-checkbox" class="ml-2  text-sm font-medium text-gray-900 dark:text-gray-300">Estoy de acuerdo en ingresar al sitio utilizando la verificacion de<a target="_blank" href="https://www.microsoft.com/es-co/security/business/security-101/what-is-two-factor-authentication-2fa" class="text-blue-600 dark:text-blue-500 hover:underline"> 2FA (doble factor de autenticacion)</a>.</label>
+                    </div>
+
+<br>
+                    <div class="sm:col-span-3 w-96 mr-2 flex justify-between absolute bottom-14 right-14">
+                        <button type="button" class="text-sm rounded-md bg-slate-50 mr-2 w-52 font-semibold leading-6 text-gray-900 hover:bg-slate-100">Cancel</button>
+                        <button id="submit-btn" type="submit"
+                            class="rounded-md w-52 bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+
+    </div>
+</body>
+
+</html>
